@@ -1,0 +1,74 @@
+.dice-roller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.dice-container {
+  display: flex;
+  gap: 15px;
+}
+
+.die {
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.die.rolling {
+  animation: roll 0.8s ease-in-out;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.roll-button {
+  padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: bold;
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.roll-button:hover:not(:disabled) {
+  background: #ea580c;
+}
+
+.roll-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.roll-result {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f97316;
+}
