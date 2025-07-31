@@ -2,6 +2,31 @@
 
 A digital version of the classic dice football board game, built with React and Vite.
 
+## Claude Code Experiment
+
+This game was created as an AI experiment.
+
+1. I took pictures of a wooden board game in a store.
+2. I fed the pictures into ChatGPT to build a complete understanding of the game
+   from the pictures. I asked it to write out this understanding, as well as its
+   proposed implementation overview to a markdown file.
+3. I fed this markdown file into Claude Code and asked it to review the game
+   and the proposed implementation overview and come up with its own plan for
+   how to implement it. I asked it to implement its plan.
+
+After the first implementation, I issued a few follow-up prompts for one major
+bug and to improve some layout:
+
+1. Major bug: explain that when posession of the ball changes, the direction of
+   play changes. Its first implementation had play continuing in the same
+   direction.
+2. Adjust layout so that more was visible on the screen at once. (Only tested on
+   desktop.)
+3. Ask it to add visual indication of who currently has the ball other than the
+   info in the game log.
+
+![Original Board Game](images/original.png)
+
 ## Features
 
 - **Complete game mechanics**: downs, possessions, scoring, field goals
