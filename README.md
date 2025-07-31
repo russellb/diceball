@@ -25,7 +25,13 @@ bug and to improve some layout:
 3. Ask it to add visual indication of who currently has the ball other than the
    info in the game log.
 
+### Original Board Game
+
 ![Original Board Game](images/original.png)
+
+### Game Screenshot
+
+![Game Screenshot](images/diceball.png)
 
 ## Features
 
